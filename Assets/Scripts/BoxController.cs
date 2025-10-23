@@ -6,7 +6,6 @@ public class BoxController : MonoBehaviour
 
     void Start()
     {
-        // Find the single instance of the GameManager in the scene
         gameManager = FindFirstObjectByType<GameManager>();
 
         if (gameManager == null)
@@ -15,14 +14,12 @@ public class BoxController : MonoBehaviour
         }
     }
 
-    // This public method is called by the PlayerController upon collision
     public void CollectBox()
     {
         if (gameManager != null)
         {
             gameManager.BoxCollected();
         }
-        // Destroy the box GameObject
         Destroy(gameObject);
     }
 }
