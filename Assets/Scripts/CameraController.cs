@@ -4,21 +4,15 @@ public class CameraController : MonoBehaviour
 {
     public GameObject player;
     private Vector3 offset;
-    void Start()
-    {
-        offset = transform.position - player.transform.position;
-    }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
         if (player != null)
-        {
-            transform.position = player.transform.position + offset;
-        }
+            offset = transform.position - player.transform.position;
     }
-    
-    void LateUpdate()
+
+    // LateUpdate is called after Update, ensuring the camera follows smoothly after player movement
+    private void LateUpdate()
     {
         if (player != null)
         {

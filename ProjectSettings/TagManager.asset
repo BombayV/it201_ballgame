@@ -6,6 +6,8 @@ TagManager:
   tags:
   - PickUp
   - Enemy
+  - Door
+  - CollectibleBox
   layers:
   - Default
   - TransparentFX
