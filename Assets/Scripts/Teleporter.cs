@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Teleporter : MonoBehaviour
 {
-    public Transform nextStageSpawnPoint; 
+    public Transform nextStageSpawnPoint;
 
     private GameManager gameManager;
 

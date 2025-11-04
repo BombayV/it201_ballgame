@@ -2,14 +2,12 @@ using UnityEngine;
 
 public class PetController : MonoBehaviour
 {
-    [Header("Pet Follow Settings")]
-    public Transform player;
+    [Header("Pet Follow Settings")] public Transform player;
     public float followSpeed = 8f;
     public float stoppingDistance = 2f;
     public float rotationSpeed = 5f;
 
-    [Header("Bobbing Animation")]
-    public float bobHeight = 0.5f;
+    [Header("Bobbing Animation")] public float bobHeight = 0.5f;
     public float bobSpeed = 2f;
     private float bobOffset = 0f;
 
