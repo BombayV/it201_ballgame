@@ -277,6 +277,7 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Congratulations! You have completed all stages!");
             ShowWinScreen();
+            gameOver = true;
         }
     }
 

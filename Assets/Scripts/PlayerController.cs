@@ -15,7 +15,6 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("PlayerController Start");
         rb = GetComponent<Rigidbody>();
     }
 
@@ -39,6 +38,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && Mathf.Abs(rb.linearVelocity.y) < 0.01f)
         {
+            Debug.Log("Jump");
             rb.AddForce(Vector3.up * jumpForce);
         }
 
