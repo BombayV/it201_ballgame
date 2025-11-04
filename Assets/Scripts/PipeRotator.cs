@@ -2,12 +2,10 @@ using UnityEngine;
 
 public class PipeRotator : MonoBehaviour
 {
-    [Header("Rotation Settings")]
-    public float rotationSpeed = 100f;
+    [Header("Rotation Settings")] public float rotationSpeed = 100f;
     public Vector3 rotationAxis = Vector3.up;
 
-    [Header("Physics Settings")]
-    public float pushForce = 10f;
+    [Header("Physics Settings")] public float pushForce = 10f;
     public float pushUpwardForce = 5f;
 
     private void Update()
@@ -24,7 +22,7 @@ public class PipeRotator : MonoBehaviour
             {
                 Vector3 directionAway = (other.transform.position - transform.position).normalized;
                 Vector3 pushDirection = new Vector3(directionAway.x, 0, directionAway.z).normalized;
-                
+
                 rb.linearVelocity = new Vector3(
                     pushDirection.x * pushForce,
                     rb.linearVelocity.y + pushUpwardForce * Time.deltaTime,

@@ -3,20 +3,19 @@ using UnityEngine.AI;
 
 public class EnemyController : MonoBehaviour
 {
-    [Header("Enemy Setup")]
-    public Transform player;
+    [Header("Enemy Setup")] public Transform player;
     public float chaseSpeed = 5f;
 
-    [Header("Momentum Settings")]
-    public float acceleration = 2f;
+    [Header("Momentum Settings")] public float acceleration = 2f;
     public float angularSpeed = 50f;
     public float stoppingDistance = 0.5f;
 
     private NavMeshAgent navMeshAgent;
     private bool isActive = true;
 
-    [Header("Rolling Settings")]
-    public float rollSpeed = 5f;
+    private float nextTouchCheckTime = 0f;
+
+    [Header("Rolling Settings")] public float rollSpeed = 5f;
     public Vector3 rotationAxis = Vector3.right;
 
     private void Start()
@@ -62,22 +61,22 @@ public class EnemyController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Enemy touched the player! Player loses!");
-            
+            if (Time.time < nextTouchCheckTime)
+                return;
+
+            nextTouchCheckTime = Time.time + 2f;
             GameManager gameManager = FindFirstObjectByType<GameManager>();
             if (gameManager != null)
             {
                 gameManager.PlayerCaught();
             }
-            
-            Destroy(other.gameObject);
         }
     }
 
     public void Deactivate()
     {
         isActive = false;
-        
+
         if (navMeshAgent != null)
             navMeshAgent.enabled = false;
 

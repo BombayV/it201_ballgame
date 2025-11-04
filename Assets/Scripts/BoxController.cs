@@ -20,6 +20,7 @@ public class BoxController : MonoBehaviour
         {
             gameManager.BoxCollected();
         }
+
         Destroy(gameObject);
     }
 }

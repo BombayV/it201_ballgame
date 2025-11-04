@@ -7,6 +7,11 @@ public class PlayerController : MonoBehaviour
     private float movementX;
     private float movementY;
     public float speed = 15f;
+    public float jumpForce = 20f;
+    public float dashForce = 50f;
+
+    private float dashCooldown = 2f;
+    private float lastDashTime = -Mathf.Infinity;
 
     private void Start()
     {
@@ -27,6 +32,24 @@ public class PlayerController : MonoBehaviour
         {
             Vector3 movement = new Vector3(movementX, 0.0f, movementY);
             rb.AddForce(movement * speed);
+        }
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && Mathf.Abs(rb.linearVelocity.y) < 0.01f)
+        {
+            rb.AddForce(Vector3.up * jumpForce);
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftShift) && Time.time >= lastDashTime + dashCooldown)
+        {
+            Vector3 dashDirection = new Vector3(movementX, 0, movementY).normalized;
+            if (dashDirection != Vector3.zero)
+            {
+                rb.AddForce(dashDirection * dashForce, ForceMode.Impulse);
+                lastDashTime = Time.time;
+            }
         }
     }
 
