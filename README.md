@@ -2,13 +2,14 @@
 Simple recreation of the ball game from unity.
 
 # Used Assets
-- [Yughues Free Wooden Floor Materials](https://assetstore.unity.com/packages/2d/textures-materials/wood/yughues-free-wooden-floor-materials-13213)
 - [Yughues Free Metal Materials](https://assetstore.unity.com/packages/2d/textures-materials/metals/yughues-free-metal-materials-12949)
-- [Yughues Free Ground Materials](https://assetstore.unity.com/packages/2d/textures-materials/nature/yughues-free-ground-materials-13001)
-- [Free Trees](https://assetstore.unity.com/packages/3d/vegetation/trees/free-trees-103208)
-- [Free Stylized Skybox](https://assetstore.unity.com/packages/2d/textures-materials/sky/free-stylized-skybox-212257)
 - [Environment Pack - Rocks Stylized](https://assetstore.unity.com/packages/3d/environments/environment-pack-rocks-stylized-316250)
-- [Simple Stylized Cardboard Boxes](https://assetstore.unity.com/packages/3d/props/simple-stylized-cardboard-boxes-308830)
 - [Stylized Robotic Parrot](https://assetstore.unity.com/packages/3d/characters/animals/birds/stylized-robotic-parrot-313751)
-- [Low Polygon Soccer Ball](https://assetstore.unity.com/packages/3d/low-polygon-soccer-ball-84382)
-- [RPG Monster Buddy](https://assetstore.unity.com/packages/3d/characters/creatures/rpg-monster-buddy-pbr-polyart-253961)
+- [Fantasy FREE - Low Poly 3D Models Pack](https://assetstore.unity.com/packages/3d/environments/fantasy/fantasy-free-low-poly-3d-models-pack-260367)
+- [Animals FREE - Animated Low Poly 3D Models](https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727)
+- [FREE Low poly Human - RPG Character](https://assetstore.unity.com/packages/3d/characters/humanoids/fantasy/free-low-poly-human-rpg-character-219979)
+- [Pixel Skies DEMO Background pack](https://assetstore.unity.com/packages/2d/environments/pixel-skies-demo-background-pack-226622)
+- [Dynamic Day/Night Cycle (procedural skybox)](https://assetstore.unity.com/packages/templates/systems/dynamic-day-night-cycle-procedural-skybox-319508)
+- [Simple Gems and Items Ultimate Animated Customizable Pack](https://assetstore.unity.com/packages/3d/props/simple-gems-and-items-ultimate-animated-customizable-pack-73764)
+- [TELEPORTER](https://assetstore.unity.com/packages/vfx/particles/teleporter-25645)
+- [Realistic Terrain Textures FREE](https://assetstore.unity.com/packages/2d/textures-materials/floors/realistic-terrain-textures-free-279940)

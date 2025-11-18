@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/Assets/Scripts/Teleporter.cs">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/Assets/Scripts/Teleporter.cs" />
+              <option name="originalContent" value="using UnityEngine;&#10;&#10;public class Teleporter : MonoBehaviour&#10;{&#10;    public Transform nextStageSpawnPoint;&#10;&#10;    private GameManager gameManager;&#10;&#10;    void Start()&#10;    {&#10;        gameManager = FindFirstObjectByType&lt;GameManager&gt;();&#10;        if (gameManager == null)&#10;        {&#10;            Debug.LogError(&quot;GameManager not found! Teleporter cannot function.&quot;);&#10;        }&#10;    }&#10;&#10;    void OnTriggerEnter(Collider other)&#10;    {&#10;        if (other.CompareTag(&quot;Player&quot;))&#10;        {&#10;            if (gameManager != null)&#10;            {&#10;                gameManager.StartNextStage(Vector3.zero);&#10;                Destroy(gameObject);&#10;            }&#10;        }&#10;    }&#10;}" />
+              <option name="updatedContent" value="using UnityEngine;&#10;using UnityEngine.SceneManagement;&#10;&#10;public class Teleporter : MonoBehaviour&#10;{&#10;    public string nextSceneName;  // Scene to load when player enters teleporter&#10;&#10;    void OnTriggerEnter(Collider other)&#10;    {&#10;        if (other.CompareTag(&quot;Player&quot;))&#10;        {&#10;            if (!string.IsNullOrEmpty(nextSceneName))&#10;            {&#10;                Debug.Log($&quot;Teleporting to scene: {nextSceneName}&quot;);&#10;                SceneManager.LoadScene(nextSceneName);&#10;            }&#10;            else&#10;            {&#10;                Debug.LogError(&quot;Teleporter has no scene name configured!&quot;);&#10;            }&#10;        }&#10;    }&#10;}" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
